@@ -1,0 +1,166 @@
+.container{
+    height: 100vh;
+    display: flex;
+    width: 100vw;
+
+    .left-div{
+        background-color: black;
+        width: 100%;
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 37px;
+
+        .logo{
+            width: 100px;
+        }
+
+        .help{
+            display: none;
+        }
+
+        .inner-container{
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .sub-container{
+                width: 73px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+
+                img{
+                    width: 20px;
+                }
+
+                h4{
+                    font-size: 18px;
+                    line-height: 21px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .right-div{
+        flex:4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+
+        .inner-container{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            h1{
+                width: 521px;
+                font-size: 48px;
+                line-height: 57.8px;
+                font-weight: 700;
+            }
+            p{
+                width: 521px;
+                font-size: 18px;
+                line-height: 27px;
+            }
+
+            form{
+                margin-top: 24px;
+                input{
+                    padding: 16px;
+
+                }
+            }
+        }
+    }
+    .bottom-img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .container{
+        flex-direction: column;
+
+        .left-div{
+            align-items: unset;
+            flex-direction: row;
+            flex: unset;
+            justify-content: space-between;
+            padding: 24px;
+            width: 100vw;
+            height: unset;
+
+            .logo{
+                width: 88px;
+                height: 23px;
+            }
+            .help{
+                display: block;
+            }
+
+            .inner-container{
+                display: none;
+            }
+        }
+
+        .right-div{
+            padding: 24px;
+            justify-content: unset;
+            align-items: unset;
+
+            .inner-container{
+                h1{
+                    width: unset;
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+
+                p{
+                    width: unset;
+                    font-size: 14px;
+                    line-height: 21px;
+                }
+
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 16px;
+
+                    input{
+                        border-radius: 12px;
+                        border: 1px solid rgba(26, 27, 26, 0.2);;
+                    }
+                    button{
+                        padding: 15px;
+                        background-color: #2EBB55;
+                        border-radius: 10px;
+                        border: none;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .bottom-img{
+            display: block;
+            background-color: black;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            height: 110px;
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
